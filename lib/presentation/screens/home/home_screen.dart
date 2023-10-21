@@ -25,29 +25,34 @@ class _HomeView extends StatelessWidget {
     return ListView.builder(
       itemCount: appMenuItems.length,
       itemBuilder: (BuildContext context, int index) {
-        final menuItems = appMenuItems[index];
-        return _CustonListTile(menuItems: menuItems);
+        final menuItem = appMenuItems[index];
+        return _CustonListTile(menuItem: menuItem);
       }
     );
   }
 }
 
 class _CustonListTile extends StatelessWidget {
-  const _CustonListTile({required this.menuItems});
+  const _CustonListTile({required this.menuItem});
 
-  final MenuItem menuItems;
+  final MenuItem menuItem;
 
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     return ListTile(
-      leading: Icon(menuItems.icon, color: colors.primary),
+      leading: Icon(menuItem.icon, color: colors.primary),
       trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
-      title: Text(menuItems.title),
-      subtitle: Text(menuItems.subTitle),
+      title: Text(menuItem.title),
+      subtitle: Text(menuItem.subTitle),
       onTap: () {
-        /// todo: navegar a otras pantallas
-        /// Navigator.of(context).pushNamed(menuItems.link);
+        /// Navegar a otra pantalla forma 1
+        // Navigator.of(context).push(
+        //   MaterialPageRoute(
+        //     builder: (context) => const ButtonsScreen(),
+        //   ),
+        // );
+        Navigator.pushNamed(context, menuItem.link);
       },
     );
   }
