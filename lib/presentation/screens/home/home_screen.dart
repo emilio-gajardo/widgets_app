@@ -48,14 +48,20 @@ class _CustonListTile extends StatelessWidget {
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {
-        /// Navegar a otra pantalla forma 1
+        /// [Forma 1: Navegar a otra pantalla]
         // Navigator.of(context).push(
         //   MaterialPageRoute(
         //     builder: (context) => const ButtonsScreen(),
         //   ),
         // );
+
+        /// [Forma 2: Navegar a otra pantalla]
         // Navigator.pushNamed(context, menuItem.link);
+
+        /// [Forma 3: Navegar a otra pantalla]
         // context.pushNamed(CardsScreen.name);
+
+        /// [Forma 4: Navegar a otra pantalla]
         context.push(menuItem.link);
       },
     );
