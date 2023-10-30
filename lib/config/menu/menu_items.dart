@@ -37,7 +37,7 @@ const appMenuItems = <MenuItem>[
     title: 'Snackbars y diálogos',
     subTitle: 'Indicadores en pantalla',
     link: '/snackbars',
-    icon: Icons.info
+    icon: Icons.info_outline
   ),
   MenuItem(
     title: 'Animated container',
@@ -56,6 +56,12 @@ const appMenuItems = <MenuItem>[
     subTitle: 'Introducción a la aplicación',
     link: '/tutorial',
     icon: Icons.accessibility_rounded
+  ),
+  MenuItem(
+    title: 'Infinite Scroll and Pull',
+    subTitle: 'Vistas infinitas y pull to refresh',
+    link: '/infinite',
+    icon: Icons.list_alt_rounded
   ),
 
 ];
